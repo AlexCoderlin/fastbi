@@ -14,7 +14,6 @@ Create ready-to-use Power BI Projects (.pbip) with intelligent renaming and path
 
 ![fastbi demo](https://media2.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3MmhjOHBsYjZubzQ2czNhN3V5OWFqcW03ZWVucWRtaGhhNHVmMG42MSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/UiWG8AoIf4dtVEP4Bi/200.webp) 
 *<p align="center">From template to working project in seconds.</p>*
-
 <br>
 
 ## ✨ Quick Start
@@ -38,12 +37,14 @@ uv pip install fastbi
 ```bash
 # No installation needed, runs in isolated environment
 uvx fastbi "My Project"
-uvx fbi "My Project"  # alias also works
 ```
 
 ### First-Time Setup
 
 The first time you run fastbi, a setup wizard will ask for your `.pbip` template folder location.
+
+![fastbi demo first time](https://s12.gifyu.com/images/b3b1a.gif)
+*<p align="center">First time setup: uvx fastbi "My Project" prompts for template configuration.</p>*
 
 ```bash
 # Try creating your first project - the wizard launches automatically
@@ -57,6 +58,9 @@ fastbi "My First Report"
 ### Create Projects
 
 Once configured, just pass the project name:
+
+![fastbi demo subsequent](https://s12.gifyu.com/images/b3b1Z.gif)
+*<p align="center">Subsequent use: uvx fastbi "new project" creates a project without re-configuring the template.</p>*
 
 ```bash
 # The main way (recommended):
