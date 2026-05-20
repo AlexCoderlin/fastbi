@@ -22,22 +22,22 @@ Create ready-to-use Power BI Projects (.pbip) with intelligent renaming and path
 
 **Option 1: Use without installing (quickest)**
 ```bash
+# No installation needed, runs in isolated environment
 uvx fastbi "My Project"
 ```
 
 **Option 2: Install globally (recommended for frequent use)**
 ```bash
-pip install fastbi
+# uv as a CLI tool (recommended):
+uv tool install fastbi
 
-# Or with uv:
+# Or uv as a library:
 uv pip install fastbi
+
+# Or without uv:
+pip install fastbi
 ```
 
-**Option 3: Run directly with uvx**
-```bash
-# No installation needed, runs in isolated environment
-uvx fastbi "My Project"
-```
 
 ### First-Time Setup
 
