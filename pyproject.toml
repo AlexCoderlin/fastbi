@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fastbi"
-version = "0.1.1"
+version = "0.2.0"
 description = "Scaffold Power BI projects instantly from templates"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -34,8 +34,8 @@ Repository = "https://github.com/AlexCoderlin/fastbi"
 Issues = "https://github.com/AlexCoderlin/fastbi/issues"
 
 [project.scripts]
-fastbi = "fastbi:app"
-fbi = "fastbi:app"
+fastbi = "fastbi:main"
+fbi = "fastbi:main"
 
 [tool.setuptools]
 py-modules = ["fastbi"]

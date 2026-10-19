@@ -57,14 +57,14 @@ fastbi "My First Report"
 
 ### Create Projects
 
-Once configured, just pass the project name:
-
-![fastbi demo subsequent](https://s12.gifyu.com/images/b3b1Z.gif)
-*<p align="center">Subsequent use: uvx fastbi "new project" creates a project without re-configuring the template.</p>*
+Once configured, you can create a project by simply passing the name.
 
 ```bash
-# The main way (recommended):
+# The shortcut (recommended):
 fastbi "Q4 Sales Dashboard"
+
+# Or be explicit (optional):
+fastbi new "Q4 Sales Dashboard"
 
 # ✓ Success! Project created at '202510 - Q4 Sales Dashboard'
 ```
@@ -75,11 +75,11 @@ fastbi "Q4 Sales Dashboard"
 # Shortcut (fastest):
 fastbi "Annual Report"
 
-# Explicit command:
-fastbi create "Annual Report"
+# Explicit command (optional):
 fastbi new "Annual Report"
+fastbi create "Annual Report" # also works
 
-# Using fbi alias (same functionality):
+# Using fbi alias (if installed globally):
 fbi "Annual Report"
 ```
 
@@ -118,7 +118,11 @@ The power of fastbi is that it works with **your own template**. Here's how:
 | `fastbi "Name"` | Create a new project (shortcut) |
 | `fastbi create "Name"` | Create a new project (explicit) |
 | `fastbi new "Name"` | Create a new project (alias) |
+| `fastbi "Name" --open` | Create and immediately launch in Power BI Desktop (`-O`) |
+| `fastbi "Name" --no-date` | Create without date prefix (`YYYYMM -`) |
+| `fastbi "Name" -o ./Reports` | Create in a custom output directory (`--output`) |
 | `fastbi setup` | Configure or reconfigure template path |
+| `fastbi info` | Display current template path and config status |
 | `fastbi --help` | Show all commands and options |
 | `fbi "Name"` | Same as fastbi, just cooler 😎 |
 
@@ -126,11 +130,11 @@ The power of fastbi is that it works with **your own template**. Here's how:
 
 ## 💡 Why fastbi?
 
-- **Zero Config Needed**: Works with any `.pbip` template structure
-- **Intelligent Updates**: Automatically fixes all internal paths and references
-- **Date Prefixing**: Auto-adds `YYYYMM -` prefix to keep projects organized
-- **Error Prevention**: Validates names and prevents overwrites
-- **Multiple Aliases**: Use `fastbi`, `create`, `new`, or `fbi` - whatever fits your style
+- **Zero Config Needed**: Works with any `.pbip` template structure (both `.SemanticModel` and legacy `.Dataset`)
+- **Intelligent Updates**: Automatically fixes all internal paths and references in `.pbir`, `.platform`, `.pbip`
+- **Instant Launch**: Pass `--open` to open your report directly in Power BI Desktop upon creation
+- **Flexible Organization**: Use default `YYYYMM -` date prefix or skip it with `--no-date`
+- **Safe & Clean**: Automatic rollback on failure and ignores `.git`, `.vs`, and cache files from templates
 
 <br>
 
